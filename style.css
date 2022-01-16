@@ -1,0 +1,220 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0px;
+   margin: 0px;
+}
+body{
+    direction: rtl;
+   
+}
+.grid-continer{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 200px auto auto auto;
+    grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" 
+    "sb sb sb sb sb sb sb sb sb sb sb sb"
+    "sec sec sec sec sec sec sec sec sec sec sec sec"
+    "ft ft ft ft ft ft ft ft ft ft ft ft";
+   
+}
+.main-continer{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+header{
+    grid-area: hd;
+    /* background-color: red; */
+}
+
+nav ul{
+    
+    display: flex;
+    /* justify-content: space-between; */
+}
+nav ul li{
+    flex:1;
+ list-style: none;
+ padding-top: 20px;
+ padding-bottom: 20px;
+ background-color:#f9fafc;
+ border-left: 1px solid #ccc;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color:rgba(66, 82, 110, 1);
+    padding: 20px;
+    
+}
+.nav2{
+    /* background-color: blueviolet; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 40px;
+   margin-top: 20px;
+}
+.fa-shopping-cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e5e9f2;
+    text-align: center;
+}
+.search-form{
+    background-color:#eff2f7 ;
+
+    width:50%;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.search-form input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    background-color:#eff2f7 ;
+    font-size: 20px;
+}
+.search-form button{
+    padding: 10px;
+     margin-left: 10px;
+      border: none;
+}
+.search-form button i{
+    font-size: 20px;
+}
+/* end header */
+.sidebar{
+    grid-area: sb;
+    background-color: blueviolet;
+}
+.sec{
+    grid-area: sec;
+    background-color: brown;
+}
+/*  */
+.ft{
+    grid-area: ft;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: black; */
+    color: white;
+
+    /* flex-direction: column; */
+}
+.ftcontiner{
+    flex:1;
+
+}
+  .ft-main-item  ul{
+    list-style: none;
+    padding-left: 0;
+}
+.ft-main-item  ul li{
+    padding: 5px;
+}
+
+.ft-main-item a{
+    text-decoration: none;
+    color: white;
+   
+}
+.ft-title {
+    color: #fff;
+    
+    font-size: 1.375rem;
+    padding-bottom: 0.625rem;
+}
+.ft-main {
+    padding: 1.25rem 1.875rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ft-main-item {
+    padding: 1.25rem;
+    min-width: 20%;
+}
+.form-continer{
+    background-color: #555;
+    height: 70%;
+    padding:10px;
+    border-radius: 10px;
+}
+ 
+ .ft-main .ft-main-item input[type="email"] {
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+    
+}
+ .ft-main .ft-main-item input[type="submit"] {
+     margin-top: 5px;
+    padding: 15px;
+    color:black;
+    cursor: pointer;
+    float: left;
+    border-radius: 10px;
+    
+}
+.ft-main, .ft-social{
+    background-color: black;
+
+}
+.ft-social {
+    padding: 0 1.875rem 1.25rem;
+}
+.ft-social h2 {
+    border-bottom: 1px #777 solid; }
+.ft-social-list {
+    display: flex;
+    justify-content: flex-start;
+    
+    padding-top: 1.25rem;
+    margin-right: 20px;
+}
+.ft-social-list li {
+    list-style: none;
+    margin: 0.5rem;
+    font-size: 1.25rem;
+}
+.ft-social-list li a{
+ text-decoration: none;
+    color: white;
+}
+/*  */
+.ft-legal {
+    padding: 0.9375rem 1.875rem;
+    background-color: #e6e6e6;
+    color: #333;
+}
+.ft-legal-list {
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ft-legal-list li {
+    margin: 0.125rem 0.625rem;
+    white-space: nowrap;
+    list-style: none;
+}
+.ft-legal-list li a
+{
+    text-decoration: none;
+    color: #333;
+}
+/* one before the last child */
+.ft-legal-list li:nth-last-child(2) {
+    flex: 1;       /* same as flex-grow: 1; */
+}
