@@ -7,13 +7,13 @@
 }
 body{
     direction: rtl;
-   
+   font-family: 'Tajawal', sans-serif;
 }
 .grid-continer{
-    height: 100vh;
+    /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 200px auto auto auto;
+    grid-template-rows: 200px 400px auto auto;
     grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" 
     "sb sb sb sb sb sb sb sb sb sb sb sb"
     "sec sec sec sec sec sec sec sec sec sec sec sec"
@@ -22,8 +22,8 @@ body{
 }
 .main-continer{
     width: 100%;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px;
+    padding-right: 20px; */
 }
 header{
     grid-area: hd;
@@ -37,18 +37,23 @@ nav ul{
 }
 nav ul li{
     flex:1;
+    max-width:15%;
  list-style: none;
- padding-top: 20px;
- padding-bottom: 20px;
+ padding-top: 10px;
+ padding-bottom: 10px;
  background-color:#f9fafc;
  border-left: 1px solid #ccc;
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
     color:rgba(66, 82, 110, 1);
-    padding: 20px;
+    padding: 10px;
     
+}
+nav ul li a img{
+    width:25px;
+    padding: 5px;
 }
 .nav2{
     /* background-color: blueviolet; */
@@ -57,6 +62,9 @@ nav ul li a{
     margin-left: 20px;
     margin-right: 40px;
    margin-top: 20px;
+}
+.logo img{
+    width:70px;
 }
 .fa-shopping-cart{
     display: flex;
@@ -70,7 +78,7 @@ nav ul li a{
 }
 .search-form{
     background-color:#eff2f7 ;
-
+height: 50px;
     width:50%;
     border: none;
     border-radius: 10px;
@@ -96,11 +104,38 @@ nav ul li a{
 /* end header */
 .sidebar{
     grid-area: sb;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    /* width: 100%; */
 }
+#slideset1 {
+    height: 10em; 
+    position: relative;
+}
+
+/* #slideset1img{
+    width: 100%;
+} */
+#slideset1 > * {
+    visibility: hidden;
+     position: absolute;
+  top: 0; 
+  left: 10%;
+   animation: 12s autoplay1 infinite
+}
+@keyframes autoplay1 {
+  0% 
+  {
+      visibility: visible}
+  
+  33.33% {
+      visibility: hidden}
+}
+#slideset1 > *:nth-child(1) {animation-delay: 0s}
+#slideset1 > *:nth-child(2) {animation-delay: 4s}
+#slideset1 > *:nth-child(3) {animation-delay: 8s}
 .sec{
     grid-area: sec;
-    background-color: brown;
+    /* background-color: brown; */
 }
 /*  */
 .ft{
@@ -136,14 +171,14 @@ nav ul li a{
     padding-bottom: 0.625rem;
 }
 .ft-main {
-    padding: 1.25rem 1.875rem;
+    padding: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 .ft-main-item {
-    padding: 1.25rem;
-    min-width: 20%;
+    padding: 10px;
+    min-width: 160px;
 }
 .form-continer{
     background-color: #555;
@@ -188,6 +223,9 @@ nav ul li a{
     margin: 0.5rem;
     font-size: 1.25rem;
 }
+.ft-social-list li a img{
+    max-width: 20px;
+}
 .ft-social-list li a{
  text-decoration: none;
     color: white;
@@ -214,7 +252,14 @@ nav ul li a{
     text-decoration: none;
     color: #333;
 }
-/* one before the last child */
-.ft-legal-list li:nth-last-child(2) {
-    flex: 1;       /* same as flex-grow: 1; */
+.copy{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.sm-menue li{
+    
+ display: inline-block;
+ /* margin-right: 20px; */
+ /* padding: 5px; */
 }
