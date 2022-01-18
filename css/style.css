@@ -21,35 +21,58 @@ body{
    
 }
 .main-continer{
-    width: 100%;
-    /* padding-left: 20px;
-    padding-right: 20px; */
+    margin-right: auto;
+    margin-left: auto;
+    /* width: 100%; */
+    padding-left: 40px;
+    padding-right: 40px;
 }
 header{
     grid-area: hd;
     /* background-color: red; */
 }
-
+.hd-color{
+    background-color:#f9fafc;
+}
 nav ul{
     
     display: flex;
     /* justify-content: space-between; */
+    
 }
+
+ @media(min-width:768px){
+  nav .toggle-menue{
+    display: none;}
+}
+/* nav ul{
+    float:right;
+} */
+ @media (max-width:767px){
+nav ul{
+  display: none;}
+}  
 nav ul li{
-    flex:1;
-    max-width:15%;
+    flex:auto;
+    /* max-width:20%; */
  list-style: none;
- padding-top: 10px;
- padding-bottom: 10px;
+ padding-top: 5px;
+ padding-bottom: 5px;
  background-color:#f9fafc;
- border-left: 1px solid #ccc;
+ border-left: 1px solid #e5e9f2;
+ border-bottom: 1px solid #e5e9f2;
 }
 nav ul li a{
+    display: flex;
+    justify-content: space-evenly;
     text-decoration: none;
-    font-size: 15px;
+    /* font-size: 15px; */
     color:rgba(66, 82, 110, 1);
     padding: 10px;
     
+}
+nav ul li a span{
+    font-weight:bold ;
 }
 nav ul li a img{
     width:25px;
@@ -60,8 +83,12 @@ nav ul li a img{
     display: flex;
     justify-content: space-between;
     margin-left: 20px;
-    margin-right: 40px;
-   margin-top: 20px;
+    /* margin-right: 40px;*/
+   margin-top: 20px; 
+}
+.logo{
+    flex-basis: 20%;
+    margin-right: 10px;
 }
 .logo img{
     width:70px;
@@ -76,36 +103,47 @@ nav ul li a img{
     background-color: #e5e9f2;
     text-align: center;
 }
+.form-div{
+    flex-basis: 60%;
+}
 .search-form{
+    
     background-color:#eff2f7 ;
 height: 50px;
-    width:50%;
+    width:100%;
     border: none;
-    border-radius: 10px;
+    border-radius: 24px;
     font-size: 20px;
     display: flex;
     justify-content: space-between;
 }
 .search-form input[type="text"] {
-    padding: 10px;
+    
     margin-right: 10px;
     border: none;
     background-color:#eff2f7 ;
     font-size: 20px;
+    border-radius: 24px;
 }
 .search-form button{
     padding: 10px;
      margin-left: 10px;
       border: none;
+     border-radius: 24px;
 }
 .search-form button i{
     font-size: 20px;
 }
+.cart-icon{
+    flex-basis: 10%;
+    
+}
 /* end header */
 .sidebar{
     grid-area: sb;
+   height: auto;
     /* background-color: blueviolet; */
-    /* width: 100%; */
+    width: 100%;
 }
 #slideset1 {
     height: 10em; 
@@ -140,16 +178,19 @@ height: 50px;
 /*  */
 .ft{
     grid-area: ft;
-    display: flex;
-    justify-content: space-between;
+    
     /* background-color: black; */
-    color: white;
-
+    
     /* flex-direction: column; */
 }
 .ftcontiner{
-    flex:1;
+    /* flex:1; */
 
+}
+.ft-color{
+    /* flex:1; */
+ color: white;
+background-color: #333;
 }
   .ft-main-item  ul{
     list-style: none;
@@ -165,10 +206,10 @@ height: 50px;
    
 }
 .ft-title {
-    color: #fff;
-    
-    font-size: 1.375rem;
-    padding-bottom: 0.625rem;
+    color: #a6a6a6;
+    font-size: 16px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #444;
 }
 .ft-main {
     padding: 10px;
@@ -182,9 +223,10 @@ height: 50px;
 }
 .form-continer{
     background-color: #555;
-    height: 70%;
+    height: 50%;
     padding:10px;
     border-radius: 10px;
+    margin-top: 5px;
 }
  
  .ft-main .ft-main-item input[type="email"] {
@@ -203,7 +245,7 @@ height: 50px;
     
 }
 .ft-main, .ft-social{
-    background-color: black;
+    
 
 }
 .ft-social {
@@ -216,7 +258,7 @@ height: 50px;
     justify-content: flex-start;
     
     padding-top: 1.25rem;
-    margin-right: 20px;
+    
 }
 .ft-social-list li {
     list-style: none;
@@ -224,7 +266,7 @@ height: 50px;
     font-size: 1.25rem;
 }
 .ft-social-list li a img{
-    max-width: 20px;
+    max-width: 35px;
 }
 .ft-social-list li a{
  text-decoration: none;
@@ -232,7 +274,8 @@ height: 50px;
 }
 /*  */
 .ft-legal {
-    padding: 0.9375rem 1.875rem;
+   
+    padding: 10px;
     background-color: #e6e6e6;
     color: #333;
 }
@@ -240,26 +283,180 @@ height: 50px;
     
     display: flex;
     justify-content: space-between;
+    /* align-items:center; */
     flex-wrap: wrap;
+    margin-top: 20px;
+    
 }
 .ft-legal-list li {
     margin: 0.125rem 0.625rem;
     white-space: nowrap;
     list-style: none;
 }
-.ft-legal-list li a
-{
+.ft-legal-list li a{
     text-decoration: none;
-    color: #333;
+    color: #333; 
+}
+.brands{
+   flex-basis: 60%;  
+}
+
+.brands li{
+    display: inline-block;
+    width: 50px;
+    padding-left:30px;
+    height: 50px;
+
+}
+.brands li img{
+    width: 70px;
+    height: 40px;
 }
 .copy{
-    display: flex;
+    flex-basis: 40%;
+    /* display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column; */
 }
 .sm-menue li{
-    
+   
  display: inline-block;
- /* margin-right: 20px; */
- /* padding: 5px; */
+ 
+ /* margin-right: 20px;*/
+ padding: 5px;
 }
+.sm-menue li a{
+    text-decoration: none;
+    color: black;
+}
+/* login page */
+.model-continer{
+  display: flex;
+  justify-content: center;
+}
+#modal {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Full width */
+  height: auto;/* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#modal2 {
+  display: none; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  	z-index: 1080 !important;/* Sit on top */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+#modal2 input {
+     width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: none; 
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+ background-color: #eff2f7;
+}
+.modal-content{
+  text-align: center;
+     background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  /* border: 1px solid #888; */
+  width: 100%;
+  height: 60%;
+    /* margin-right: auto;
+    margin-left: auto; 
+     padding-left: 20px;
+    padding-right: 16px; */
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2 {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.col-1{    
+     padding:10px;
+   flex-basis: 100%;
+     min-width:600px ;  
+}
+ .forget{background-color:#eff2f7 ;
+height: 50px;
+    width:100%;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;}
+    .forget p{
+    color:#005acf;}
+#modal input {
+    
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: none; 
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
+ background-color: #eff2f7;
+}
+
+/* Style the submit button with a specific background color etc */
+#modal input[type=submit] {
+  background-color: #d4070e;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.txt{
+text-align: center;
+}
+ .modal-content button {
+   padding:10px;
+     
+       background-color: white;
+       border: none;
+       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ }
+ /* end login */
+ /* start signin */
+
+
+ /*  end signin */
