@@ -48,12 +48,12 @@
                         <div class="form-div">
                             <form class="search-form">
                                 <!-- <input type="text" id="search" name="search" placeholder="البحث" > -->
-                                <input id="searchbar" onkeyup="search_animal()" type="text" name="search"
+                                <input id="searchbar" onkeyup="search_book()" type="text" name="search"
                                     placeholder="البحث">
                                 <button><i class="fas fa-search"></i></button>
                             </form>
                         </div>
-                        <div class="cart-icon"> <i class="fas fa-shopping-cart"></i></div>
+                        <div class="cart-icon"> <i class="fas fa-shopping-cart"></i> <span id="counter"></span></div>
                     </div>
                 </div>
             </nav>
@@ -143,25 +143,25 @@
             </div>
 
             <!-- العروض الحاليه -->
-            <section class="list">
+            <section class="">
                 <div class="main-continer">
                     <h2>العروض الحالية</h2>
-                    <div class="raw1 list" >
-                        <div class="col-5 card">
+                    <div class="raw1 list">
+                        <div class="col-5">
 
-                            <div class="flexCard card">
+                            <div class="flexCard">
                                 <a href="details.html"> <img src="img/book1.jpg" alt="" class="book-photo"></a>
                                 <div class="card-title">
                                     <img src="img/svg/svgexport-57.svg" alt="">
                                     <p>كتاب الكتروني</p>
 
                                 </div>
-                                <div class="serch-book card"><span>كبريا وهوى(كتاب الكتروني)</span></div>
+                                <div><span>اربعه</span></div>
                                 <div>17ر.س</div>
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -182,12 +182,12 @@
                                     <p>كتاب الكتروني</p>
 
                                 </div>
-                                <div class="serch-book"><span>كبريا وهوى(كتاب الكتروني)</span></div>
+                                <div><span>ثلاثه</span></div>
                                 <div>17ر.س</div>
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -208,12 +208,12 @@
                                     <p>كتاب الكتروني</p>
 
                                 </div>
-                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div>اثنين</div>
                                 <div>17ر.س</div>
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -235,12 +235,12 @@
                                     <p>كتاب الكتروني</p>
 
                                 </div>
-                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div>واحد</div>
                                 <div>17ر.س</div>
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -266,7 +266,7 @@
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -285,17 +285,18 @@
                 </div>
             </section>
             <!-- الكتب الدينية  -->
-            <section class="list">
+            <section>
                 <div class="main-continer">
                     <h2>الكتب الدينية</h2>
                     <div class="raw1">
                         <div class="col-5">
 
-                            <div class="flexCard card">
+                            <div class="flexCard">
                                 <a href="details.html"> <img src="img/book1.jpg" alt="" class="book-photo"></a>
                                 <div class="card-title">
                                     <img src="img/svg/svgexport-57.svg" alt="">
                                     <p>كتاب الكتروني</p>
+
 
                                 </div>
                                 <div>رقيه</div>
@@ -303,7 +304,7 @@
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -329,7 +330,7 @@
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -355,7 +356,7 @@
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -382,7 +383,7 @@
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -408,7 +409,7 @@
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
                                     <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
                                     <img src="img/svg/svgexport-56.svg">
                                 </div>
                                 <div>
@@ -599,6 +600,7 @@
     </div>
     <script src="js/app.js"></script>
     <script src="js/app2.js"></script>
+    <script src="js/app3.js"></script>
 </body>
 
 </html>

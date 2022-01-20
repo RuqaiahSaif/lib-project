@@ -593,15 +593,14 @@ text-align: center;
    width: 165px;
  
  }
- .card{
-   display: list-item;   
- }
-.flexCard{
+
+.{
   text-align: center;
     /* padding: 10px; */
     min-width: 200px;
     border: 1px solid #f2f2f2;
         margin-right: 20px;
+
 }
 .card-title{
   display: flex;
@@ -925,5 +924,16 @@ img.hover-shadow {
 }
     /* اغلاق صفحة التفاصيل */
 /* البحث */
-.serch-book{
-display: list-item;	}
+
+#counter{
+  width: 20px;
+height: 20px;
+background-color: red;
+    border-radius: 50%;
+color:white;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+
+}
