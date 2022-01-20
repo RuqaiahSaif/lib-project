@@ -47,7 +47,9 @@
                         <div class="logo"><img src="img/logo.png" alt=""></div>
                         <div class="form-div">
                             <form class="search-form">
-                                <input type="text" id="search" name="search" placeholder="البحث">
+                                <!-- <input type="text" id="search" name="search" placeholder="البحث" > -->
+                                <input id="searchbar" onkeyup="search_animal()" type="text" name="search"
+                                    placeholder="البحث">
                                 <button><i class="fas fa-search"></i></button>
                             </form>
                         </div>
@@ -141,19 +143,20 @@
             </div>
 
             <!-- العروض الحاليه -->
-            <section>
+            <section class="list">
                 <div class="main-continer">
                     <h2>العروض الحالية</h2>
-                    <div class="raw1">
-                        <div class="col-5">
+                    <div class="raw1 list" >
+                        <div class="col-5 card">
 
-                            <div class="flexCard">
-                               <a href="details.html"> <img src="img/book1.jpg" alt="" class="book-photo"></a>
+                            <div class="flexCard card">
+                                <a href="details.html"> <img src="img/book1.jpg" alt="" class="book-photo"></a>
                                 <div class="card-title">
-                                    <img src="img/svg/svgexport-57.svg" alt=""><p>كتاب الكتروني</p>
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
 
                                 </div>
-                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div class="serch-book card"><span>كبريا وهوى(كتاب الكتروني)</span></div>
                                 <div>17ر.س</div>
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
@@ -175,10 +178,11 @@
                             <div class="flexCard">
                                 <img src="img/book1.jpg" alt="" class="book-photo">
                                 <div class="card-title">
-                                <img src="img/svg/svgexport-57.svg" alt="">  <p>كتاب الكتروني</p>
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
 
                                 </div>
-                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div class="serch-book"><span>كبريا وهوى(كتاب الكتروني)</span></div>
                                 <div>17ر.س</div>
                                 <div>شامل الضريبه</div>
                                 <div class="icons">
@@ -200,7 +204,8 @@
                             <div class="flexCard">
                                 <img src="img/book1.jpg" alt="" class="book-photo">
                                 <div class="card-title">
-                                <img src="img/svg/svgexport-57.svg" alt=""> <p>كتاب الكتروني</p>
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
 
                                 </div>
                                 <div>كبريا وهوى(كتاب الكتروني)</div>
@@ -226,7 +231,8 @@
                             <div class="flexCard">
                                 <img src="img/book1.jpg" alt="" class="book-photo">
                                 <div class="card-title">
-                                <img src="img/svg/svgexport-57.svg" alt=""> <p>كتاب الكتروني</p>
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
 
                                 </div>
                                 <div>كبريا وهوى(كتاب الكتروني)</div>
@@ -251,7 +257,8 @@
                             <div class="flexCard">
                                 <img src="img/book1.jpg" alt="" class="book-photo">
                                 <div class="card-title">
-                                    <img src="img/svg/svgexport-57.svg" alt=""><p>كتاب الكتروني</p>
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
 
                                 </div>
                                 <div>كبريا وهوى(كتاب الكتروني)</div>
@@ -277,6 +284,149 @@
                     </div>
                 </div>
             </section>
+            <!-- الكتب الدينية  -->
+            <section class="list">
+                <div class="main-continer">
+                    <h2>الكتب الدينية</h2>
+                    <div class="raw1">
+                        <div class="col-5">
+
+                            <div class="flexCard card">
+                                <a href="details.html"> <img src="img/book1.jpg" alt="" class="book-photo"></a>
+                                <div class="card-title">
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
+
+                                </div>
+                                <div>رقيه</div>
+                                <div>17ر.س</div>
+                                <div>شامل الضريبه</div>
+                                <div class="icons">
+                                    <img src="img/svg/svgexport-2.svg">
+                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-56.svg">
+                                </div>
+                                <div>
+                                    عرض خاص <span id="days">:</span>
+                                    <span id="hours">:</span>
+                                    <span id="minutes">:</span>
+                                    <span id="seconds">:</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+
+                            <div class="flexCard">
+                                <img src="img/book1.jpg" alt="" class="book-photo">
+                                <div class="card-title">
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
+
+                                </div>
+                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div>17ر.س</div>
+                                <div>شامل الضريبه</div>
+                                <div class="icons">
+                                    <img src="img/svg/svgexport-2.svg">
+                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-56.svg">
+                                </div>
+                                <div>
+                                    عرض خاص <span id="days1">:</span>
+                                    <span id="hours1">:</span>
+                                    <span id="minutes1">:</span>
+                                    <span id="seconds1">:</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+
+                            <div class="flexCard">
+                                <img src="img/book1.jpg" alt="" class="book-photo">
+                                <div class="card-title">
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
+
+                                </div>
+                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div>17ر.س</div>
+                                <div>شامل الضريبه</div>
+                                <div class="icons">
+                                    <img src="img/svg/svgexport-2.svg">
+                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-56.svg">
+                                </div>
+                                <div>
+                                    عرض خاص <span id="days2">:</span>
+                                    <span id="hours2">:</span>
+                                    <span id="minutes2">:</span>
+                                    <span id="seconds2">:</span>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+
+                            <div class="flexCard">
+                                <img src="img/book1.jpg" alt="" class="book-photo">
+                                <div class="card-title">
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
+
+                                </div>
+                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div>17ر.س</div>
+                                <div>شامل الضريبه</div>
+                                <div class="icons">
+                                    <img src="img/svg/svgexport-2.svg">
+                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-56.svg">
+                                </div>
+                                <div>
+                                    عرض خاص <span id="days3">:</span>
+                                    <span id="hours3">:</span>
+                                    <span id="minutes3">:</span>
+                                    <span id="seconds3">:</span>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-5">
+
+                            <div class="flexCard">
+                                <img src="img/book1.jpg" alt="" class="book-photo">
+                                <div class="card-title">
+                                    <img src="img/svg/svgexport-57.svg" alt="">
+                                    <p>كتاب الكتروني</p>
+
+                                </div>
+                                <div>كبريا وهوى(كتاب الكتروني)</div>
+                                <div>17ر.س</div>
+                                <div>شامل الضريبه</div>
+                                <div class="icons">
+                                    <img src="img/svg/svgexport-2.svg">
+                                    <img src="img/svg/svgexport-21.svg">
+                                    <img src="img/svg/svgexport-56.svg">
+                                </div>
+                                <div>
+                                    عرض خاص <span id="days4">:</span>
+                                    <span id="hours4">:</span>
+                                    <span id="minutes4">:</span>
+                                    <span id="seconds4">:</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- نهاية الكتب الدينيه -->
             <!-- end books section-->
             <footer class="ft">
                 <div class="ft-color">
