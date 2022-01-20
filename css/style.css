@@ -134,7 +134,7 @@ height: 50px;
 .search-form button i{
     font-size: 20px;
 }
-.cart-icon{
+art-icon{
     flex-basis: 10%;
     
 }
@@ -329,6 +329,10 @@ background-color: #333;
     text-decoration: none;
     color: black;
 }
+/* slider */
+
+
+/* end slider */
 /* login page */
 .model-continer{
   display: flex;
@@ -341,8 +345,8 @@ background-color: #333;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50%; /* Full width */
-  height: auto;/* Full height */
+  width: 100%; /* Full width */
+  height: 100%;/* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -354,8 +358,8 @@ background-color: #333;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50%; /* Full width */
-  height: auto; /* Full height */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -460,3 +464,461 @@ text-align: center;
 
 
  /*  end signin */
+ /* start Slideshow */
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+ /*  end Slideshow */
+ /* تصنيف حسب القسم */
+.raw{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px , 1fr));
+        grid-row-gap: 60px;
+        grid-column-gap: 40px;
+        place-content: center;
+        margin-bottom: 20px;
+         margin-top: 20px;
+
+    }
+    .col-7{
+     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      text-align: center;
+      border-radius: 5px;
+      padding: 20px;
+    }
+/* اغلاق تصنيف  */
+/* العروض الحاليه */
+.raw1{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px , 1fr));
+        grid-row-gap: 60px;
+        grid-column-gap: 40px;
+        place-content: center;
+        margin-bottom: 20px;
+         margin-top: 20px;
+
+    }
+/*  */
+    .book-photo{
+   width: 165px;
+ 
+ }
+.flexCard{
+  text-align: center;
+    /* padding: 10px; */
+    min-width: 200px;
+    border: 1px solid #f2f2f2;
+        margin-right: 20px;
+}
+.card-title{
+  display: flex;
+      justify-content: center;
+    align-items: center;
+}
+.card-title img{
+  width: 30px;
+  
+}
+.icons{
+    display: flex;
+justify-content: space-around;
+margin-top: 20px;
+}
+.icons img{
+    width:30px;
+}
+/* اغلاق العروض */
+/* السلة */
+.col-cart1{
+    flex-basis: 70%;
+    padding:10px;
+    min-width: 500px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+        flex-direction: column;
+}
+
+ .cart-det{
+    
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+     
+ }  
+ .book-name{
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .book-name p{
+   color:rgba(66, 82, 110, 1);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    }
+     .book-name span{
+   color:rgba(66, 82, 110, 1);
+    font-size: 16px;
+    padding: 10px;
+    }
+    .book-name + p{
+color:#d4070e;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    } 
+    .book-name + p span{  
+color:#d4070e;
+ font-size: 16px;
+    }
+ 
+ .cart-det img{
+     width: 40px;}
+     .note{
+         background-color: ;
+     }
+.col-cart2{
+    flex-basis: 30%;
+    padding:10px;
+    min-width:200px;
+    margin-bottom: 50px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   
+}
+.cart-continer{
+margin-right: auto;
+    margin-left: auto;
+    /* width: 100%; */
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.title-cart{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* font-size: 15px; */
+    color:rgba(66, 82, 110, 1);
+    padding: 10px;
+    
+}
+.title-cart span{
+    color: #a6a6a6;
+}
+.title-cart img{
+    width:30px;
+    padding: 5px;
+}
+.title-cart p{
+    color:rgba(66, 82, 110, 1);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    }
+    .cost-cart{
+display: flex;
+justify-content: space-between;
+    }
+   .cost-cart p{  
+      color:rgba(66, 82, 110, 1);
+    font-size: 16x;
+    font-weight: bold;
+   }
+    .cost-cart .green{
+      color: green;
+     }
+      .cost-cart .red{
+      color: red;
+     }
+     .cart-sub{
+       width:100%;
+       background-color: #d4070e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+     }
+    /* اغلاق السلة */
+    /* صفحة التفاصيل */
+    /* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  /* background-color: #eee; */
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  /* color: #01447e; */
+  text-decoration: underline;
+}
+ .book-details{
+     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+     
+}
+.col-3{
+  flex-basis: 30%;
+    padding:10px; 
+  
+}
+ .book-slide{
+   text-align: center;
+    padding: 10px;
+    min-width: 200px;
+    border: 1px solid #f2f2f2;
+        margin-right: 20px;
+}
+
+.book-pic{
+  display: flex;
+  justify-content: center;
+}
+.book-pic img{
+ width: 50px;
+}
+.book-pic > .column {
+  padding: 0 8px;
+}
+
+.book-pic:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 100%;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 100%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+    /* اغلاق صفحة التفاصيل */
+
