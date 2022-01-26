@@ -13,7 +13,7 @@ body{
     /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 200px 400px auto auto;
+    grid-template-rows: auto auto auto auto;
     grid-template-areas: "hd hd hd hd hd hd hd hd hd hd hd hd" 
     "sb sb sb sb sb sb sb sb sb sb sb sb"
     "sec sec sec sec sec sec sec sec sec sec sec sec"
@@ -33,6 +33,7 @@ header{
 }
 .hd-color{
     background-color:#f9fafc;
+    border-bottom: 1px solid #e5e9f2;
 }
 nav ul{
     
@@ -60,7 +61,7 @@ nav ul li{
  padding-bottom: 5px;
  background-color:#f9fafc;
  border-left: 1px solid #e5e9f2;
- border-bottom: 1px solid #e5e9f2;
+ 
 }
 nav ul li a{
     display: flex;
@@ -68,7 +69,7 @@ nav ul li a{
     text-decoration: none;
     /* font-size: 15px; */
     color:rgba(66, 82, 110, 1);
-    padding: 10px;
+   
     
 }
 nav ul li a span{
@@ -77,6 +78,7 @@ nav ul li a span{
 nav ul li a img{
     width:25px;
     padding: 5px;
+    height: 25px;
 }
 .nav2{
     /* background-color: blueviolet; */
@@ -84,32 +86,58 @@ nav ul li a img{
     justify-content: space-between;
     margin-left: 20px;
     /* margin-right: 40px;*/
-   margin-top: 20px; 
+   margin-top: 5px; 
+   align-items: center;
+   
 }
 .logo{
-    flex-basis: 20%;
+    flex-basis: 15%;
     margin-right: 10px;
 }
 .logo img{
     width:70px;
 }
-.fa-shopping-cart{
-    display: flex;
+.icon-continer{
+   width:30px;
+   height: 30px;
+     border-radius: 50%;
+    background-color: #e5e9f2;
+     text-align: center;
+     display: flex;
     justify-content: center;
     align-items: center;
-    width:40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #e5e9f2;
-    text-align: center;
+}
+.cart-icon img{
+    
+    width: 20px;
+    height: 20px;
+   
+   
+    transform: rotateY(180deg);
 }
 .form-div{
-    flex-basis: 60%;
+    flex-basis: 70%;
+}
+.cart-icon{
+   flex-basis: 5%;
+   position: relative;
+}
+#counter{
+  width: 20px;
+height: 20px;
+background-color: red;
+    border-radius: 50%;
+color:white;
+display: flex;
+justify-content: center;
+align-items: center;
+position: absolute;
+top: -40%;
 }
 .search-form{
     
     background-color:#eff2f7 ;
-height: 50px;
+height: 35px;
     width:100%;
     border: none;
     border-radius: 24px;
@@ -124,7 +152,9 @@ height: 50px;
     background-color:#eff2f7 ;
     font-size: 20px;
     border-radius: 24px;
+    font-family: 'Tajawal', sans-serif;
 }
+
 .search-form button{
     padding: 10px;
      margin-left: 10px;
@@ -134,10 +164,10 @@ height: 50px;
 .search-form button i{
     font-size: 20px;
 }
-art-icon{
-    flex-basis: 10%;
-    
-}
+.add:hover{
+  cursor: pointer;
+}    
+
 /* end header */
 .sidebar{
     grid-area: sb;
@@ -175,6 +205,23 @@ art-icon{
     grid-area: sec;
     /* background-color: brown; */
 }
+/* العروض الحاليه */
+.flexCard{
+      
+  text-align: center;
+    /* padding: 10px; */
+    border: 1px solid #f2f2f2;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+.sptialshow{
+      background-color: #d4070e;
+    color: white;
+    margin-top: 10px;
+}
+ 
 /*  */
 .ft{
     grid-area: ft;
@@ -222,34 +269,39 @@ background-color: #333;
     min-width: 160px;
 }
 .form-continer{
-    background-color: #555;
-    height: 50%;
+    background-color: rgba(72, 72, 72, 1);
+    height: 47%;
     padding:10px;
     border-radius: 10px;
     margin-top: 5px;
 }
- 
+ .form-continer input[type=submit]{
+   padding:10px;
+ }
  .ft-main .ft-main-item input[type="email"] {
     border-radius: 10px;
     padding: 15px;
     width: 100%;
     
 }
+ .ft-main .ft-main-item input[type="email"]::placeholder {
+   color: rgba(184, 191, 197, 1);
+ }
  .ft-main .ft-main-item input[type="submit"] {
-     margin-top: 5px;
+         margin-top: 5px;
     padding: 15px;
-    color:black;
+    color: black;
     cursor: pointer;
     float: left;
     border-radius: 10px;
-    
-}
-.ft-main, .ft-social{
-    
+    font-size: 16px;
+    background-color: white;
 
 }
+
+
 .ft-social {
-    padding: 0 1.875rem 1.25rem;
+    /* padding: 0 1.875rem 1.25rem; */
 }
 .ft-social h2 {
     border-bottom: 1px #777 solid; }
@@ -257,7 +309,7 @@ background-color: #333;
     display: flex;
     justify-content: flex-start;
     
-    padding-top: 1.25rem;
+    padding-top: 15px;
     
 }
 .ft-social-list li {
@@ -266,7 +318,8 @@ background-color: #333;
     font-size: 1.25rem;
 }
 .ft-social-list li a img{
-    max-width: 35px;
+       width: 30px;
+    height: 30px;
 }
 .ft-social-list li a{
  text-decoration: none;
@@ -314,16 +367,21 @@ background-color: #333;
 }
 .copy{
     flex-basis: 40%;
-    /* display: flex;
+    display: flex;
     justify-content: space-between;
-    flex-direction: column; */
+    flex-direction: column;
+}
+.copy p{
+  font-size: 14px;
+}
+.sm-menue{
+  display: flex;
+    justify-content: flex-end;
 }
 .sm-menue li{
-   
- display: inline-block;
- 
- /* margin-right: 20px;*/
  padding: 5px;
+ width: 70px;
+ font-size: 14px;
 }
 .sm-menue li a{
     text-decoration: none;
@@ -335,24 +393,10 @@ background-color: #333;
 /* end slider */
 /* login page */
 .model-continer{
-  display: flex;
-  justify-content: center;
+  
 }
 #modal {
-  display: none; /* Hidden by default */
-  position: absolute; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%; /* Full width */
-  height: 100%;/* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-#modal2 {
-  display: none; /* Hidden by default */
+ display: none;
   position: absolute; /* Stay in place */
   	z-index: 1080 !important;/* Sit on top */
   left: 50%;
@@ -364,6 +408,22 @@ background-color: #333;
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
+#modal2 {
+  display: none;/* Hidden by default */
+  position: absolute; /* Stay in place */
+  	z-index: 1080 !important; /* Sit on top */
+  left: 50%;
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  width: 100%;  /* Full width */
+  height: 100%;/* Full height */
+  overflow: auto;
+   /* Enable scroll if needed */
+  background-color: rgb(0,0,0);
+   /* Fallback color */
+  background-color: rgba(0,0,0,0.4); 
+  /* Black w/ opacity */
+}
 #modal2 input {
      width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
@@ -374,20 +434,33 @@ background-color: #333;
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
  background-color: #eff2f7;
+ font-family: 'Tajawal', sans-serif;
+}
+
+#modal2 input::placeholder {
+color: #8492a6;
+}
+.small-continer{
+  /* margin-right: auto;
+    margin-left: auto; */
+    width: 550px;
+    height: 550px;
+    margin: auto;
+  background-color: white;
+}
+.small-continer-mod2{
+  width: 550px;
+    height: auto;
+    margin: auto;
+  background-color: white;
 }
 .modal-content{
-  text-align: center;
-     background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  /* border: 1px solid #888; */
-  width: 100%;
-  height: 60%;
-    /* margin-right: auto;
-    margin-left: auto; 
-     padding-left: 20px;
-    padding-right: 16px; */
+  display: flex;
+justify-content: center;
+/* text-align: center;  */
+
 }
+
 .close {
   color: #aaaaaa;
   float: right;
@@ -396,7 +469,7 @@ background-color: #333;
 }
 .close:hover,
 .close:focus {
-  color: black;
+  color: white;
   text-decoration: none;
   cursor: pointer;
 }
@@ -415,18 +488,35 @@ background-color: #333;
 .col-1{    
      padding:10px;
    flex-basis: 100%;
-     min-width:600px ;  
+     min-width:550px ;  
+}
+#modal h1,#modal2 h1 {
+      padding: 20px;
+    border-bottom: 1px solid #f2f2f2;
+    margin-bottom: 30px;
+    
+}
+.center{
+  text-align: center;
 }
  .forget{background-color:#eff2f7 ;
-height: 50px;
+    height: 50px;
     width:100%;
     border: none;
     border-radius: 4px;
     font-size: 20px;
     display: flex;
-    justify-content: space-between;}
+    justify-content: space-between;
+    position: relative;
+  }
     .forget p{
-    color:#005acf;}
+    color:#005acf;
+    font-weight: bold;
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    padding: 5px;
+}
 #modal input {
     
   width: 100%; /* Full width */
@@ -438,8 +528,16 @@ height: 50px;
   margin-bottom: 16px; /* Bottom margin */
   resize: vertical ;/* Allow the user to vertically resize the textarea (not horizontally) */
  background-color: #eff2f7;
-}
+ position: relative;
+     font-family: 'Tajawal', sans-serif;
 
+}
+#modal input::placeholder{
+color: rgba(184, 191, 197, 1);
+margin-bottom: 5px;
+position: absolute;
+top:0px;
+}
 /* Style the submit button with a specific background color etc */
 #modal input[type=submit] {
   background-color: #d4070e;
@@ -448,21 +546,48 @@ height: 50px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  font-size: 20px;
+    margin-bottom: 50px;
+        font-family: 'Tajawal', sans-serif;
+    font-weight: bold;
 }
 .txt{
 text-align: center;
+    margin-bottom: 10px;
 }
  .modal-content button {
    padding:10px;
-     
+     width: 50%;
        background-color: white;
        border: none;
        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+       font-size: 18px;
+       font-family: 'Tajawal', sans-serif;
+       cursor: pointer;
  }
+ .center button{
+   text-align: center;
+ }
+
  /* end login */
  /* start signin */
+.signinflex{
+  display: flex;
+  justify-content: space-between;
+}
+.flex1{
+flex-basis: 75%;
+}
+.flex2{
+flex-basis: 23%;
+}
+.vercode{
+  text-align: right;
 
-
+}
+.vercode span{
+  font-weight: bold;
+}
  /*  end signin */
  /* start Slideshow */
 /* Slideshow container */
@@ -530,14 +655,21 @@ text-align: center;
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
+  background-color: #fff;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+.slideshow-container{
+  position: relative;
+}
+.dots{
+  position: absolute;
+  top:90%;
+  left: 50%;
+}
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #777272;
 }
 
 /* Fading animation */
@@ -571,7 +703,7 @@ text-align: center;
 
     }
     .col-7{
-     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
       text-align: center;
       border-radius: 5px;
       padding: 20px;
@@ -580,27 +712,29 @@ text-align: center;
 /* العروض الحاليه */
 .raw1{
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(150px , 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(230px , 1fr));
         grid-row-gap: 60px;
-        grid-column-gap: 40px;
+        grid-column-gap: 5px;
         place-content: center;
         margin-bottom: 20px;
          margin-top: 20px;
+         justify-content: center;
+         margin-right: 30px;
 
     }
 /*  */
-    .book-photo{
-   width: 165px;
+   
+.book-photo{
+  width: 175px;
  
- }
-
-.{
-  text-align: center;
-    /* padding: 10px; */
-    min-width: 200px;
-    border: 1px solid #f2f2f2;
-        margin-right: 20px;
-
+}
+.section-title{
+  display: flex;
+  justify-content: space-between;
+}
+.section-title a{
+ text-decoration: none;
+ color: blue;
 }
 .card-title{
   display: flex;
@@ -608,8 +742,35 @@ text-align: center;
     align-items: center;
 }
 .card-title img{
-  width: 30px;
+  width: 25px;
+  height: 25px;
   
+}
+.card-title p{
+  font-weight: bold;
+  
+}
+.book-title-home{
+    color: #8492a6;
+    font-size: 12px;
+}
+.book-price{
+  display: flex;
+      justify-content: center;
+    align-items: center;
+}
+.book-price p{
+  font-size: 20px;
+  color:red;
+  font-weight: bold;
+}
+.book-price span{
+    color:red;
+    font-size: 12px;
+}
+.dareba{
+  color: #8492a6;
+    font-size: 8px;
 }
 .icons{
     display: flex;
@@ -617,14 +778,661 @@ justify-content: space-around;
 margin-top: 20px;
 }
 .icons img{
-    width:30px;
+    width:25px;
+    height:25px;
 }
-/* اغلاق العروض */
+.another-ver{
+ display: flex;
+      justify-content: center;
+    align-items: center;
+}
+.another-ver span{
+  color: #8492a6;
+    /* font-weight: bold; */
+  font-size: 12px;
+}
+.another-ver p{
+  font-weight: bold;
+  color: blue;
+  font-size: 12px;
+}
+/* اغلاق الصفحه الرئيسيه */
+
+    /* صفحة التفاصيل */
+    /* Style the list */
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  /* background-color: #eee; */
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: #8492a6;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  /* color: #01447e; */
+  text-decoration: underline;
+}
+ .book-details{
+     display: flex;
+    /* align-items: center; */
+    flex-wrap: wrap;
+    /* justify-content: center; */
+     margin-bottom: 50px;
+}
+.col-3{
+  flex-basis: 30%;
+    padding:10px; 
+  
+}
+ .book-slide{
+   text-align: center;
+    padding: 10px;
+    min-width: 200px;
+    border: 1px solid #f2f2f2;
+        margin-right: 20px;
+}
+
+.book-pic{
+  display: flex;
+  justify-content: center;
+}
+.book-pic img{
+ width: 50px;
+}
+.book-pic > .column {
+  padding: 0 8px;
+}
+
+.book-pic:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Create four equal columns that floats next to eachother */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+/* .modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+} */
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hide the slides by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 100%;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 100%;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+img.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+    /* اغلاق صفحة التفاصيل */
+    .col-cart1{
+    flex-basis: 60%;
+    padding:10px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+        flex-direction: column;
+        margin-left: 30px;
+        min-width: 300px;
+
+}
+
+ .cart-det{
+    
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+     
+ }  
+ .book-name{
+         display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .book-name p{
+   color:rgba(66, 82, 110, 1);
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    }
+     .book-name span{
+   color:rgba(66, 82, 110, 1);
+    font-size: 16px;
+    padding: 10px;
+    }
+    .book-name + p{
+color:#d4070e;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    } 
+    .book-name + p span{  
+color:#d4070e;
+ font-size: 16px;
+    }
+ 
+ .cart-det img{
+     width: 40px;}
+  
+.col-cart2{
+    flex-basis: 30%;
+    padding:10px;
+    min-width:200px;
+    margin-bottom: 50px;
+    /* border: 1px solid black; */
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   height:fit-content ;
+}
+.cart-continer{
+margin-right: auto;
+    margin-left: auto;
+    /* width: 100%; */
+    margin-top: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.title-cart{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    /* font-size: 15px; */
+    color:rgba(66, 82, 110, 1);
+    padding: 10px;
+    
+}
+.title-cart span{
+    color: #a6a6a6;
+}
+.title-cart img{
+    width:30px;
+    padding: 5px;
+}
+.title-cart p{
+    color:rgba(66, 82, 110, 1);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    }
+    .cost-cart{
+display: flex;
+justify-content: space-between;
+    }
+   .cost-cart p{  
+      color:rgba(66, 82, 110, 1);
+    font-size: 16x;
+    font-weight: bold;
+   }
+    .cost-cart .green{
+      color: green;
+     }
+      .cost-cart .red{
+      color: red;
+     }
+     .cart-sub{
+       width:100%;
+       background-color: #d4070e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+     }
+    /* اغلاق السلة */
+
+/* details page */
+.detalils .book-title-details{
+  display: flex;
+  flex-direction:column ;
+  padding: 10px;
+
+}
+.detalils .book-title-head p{
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.book-details-part1{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.book-details-part1 a{
+  color: blue;
+  text-decoration: none;
+  font-size: 16px;
+}
+.book-price-details{
+  display:flex;
+  
+  align-items: center;
+}
+.book-price-details p{
+  font-size: 20px;
+  color:red;
+  font-weight: bold;
+}
+.book-price-details span{
+    color:red;
+    font-size: 12px;
+}
+.yellostar{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.yellostar .fa-star{
+  color: yellow;
+}
+.book-details-part2{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 10px;
+  
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+.book-details-part2 p{
+ color: #8492a6;
+}
+.yellostar p{
+  color: blue;
+}
+.book-explain{
+  background-color: rgba(249, 250, 252, 1);
+  /* font-size: 12px; */
+  padding: 20px;
+   border-bottom: 1px solid #e5e9f2;
+    border-top: 1px solid #e5e9f2;
+}
+.book-explain +h1{
+padding: 30px;
+}
+table{
+  width: 100%;
+  padding: 20px;
+      border-spacing: 0;
+       
+}
+
+table tr{
+  /* border-bottom:1px solid black; */
+ 
+}
+table tr td{
+  padding: 30px;
+   border-bottom: 1px solid #e5e9f2;
+} 
+.first{
+  width:20%;
+}
+.rcol-details{
+  box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+  padding: 10px;
+}
+.rcol-details .note span{
+       font-weight: bold;
+     }
+     .rcol-details .note p{
+       font-size: 12px;
+     }
+     .rcol-details .note a{
+       text-decoration: none;
+       font-weight: bold;
+     }
+     .rcol-details .note {
+       background-color: #fff9eb;
+       border-right:4px solid #fcd214 ;
+       padding: 10px;
+       flex-basis: 60%;
+       border-radius: 5px;
+       line-height: 20px;
+     }
+     .flex-det{
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-top: 20px;
+     }
+    .flex-1-det{
+          flex-basis: 15%;
+    border: none;
+    background-color: #eff2f7;
+    border-radius: 5px;
+}
+    
+    .flex-2-det{
+    flex-basis:80%;
+    padding: 5px;
+    background-color: #d4070e;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    }
+    .flex-2-det img{
+      width:25px;
+    }
+   
+    .taswqamen{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .shahn{
+      display: flex;
+      margin-top: 20px;
+    }
+    .mosharkah{
+       display: flex;
+      margin-top: 20px;
+       box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+       padding: 10px;
+       align-items: center;
+    }
+     .taswqamen p, .shahn p{
+       font-size: 12px;
+       font-weight: bold;
+     }
+
+    .taswqamen img, .shahn img, .mosharkah img{
+      width: 15px;
+      height: 15px;
+    }
+.mosharkah p{
+font-weight: bold;}
+.dubleclass{
+  box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+  padding: 5px;
+}
+
+.lessbtn{
+  color:blue;
+  float:left;
+  
+  cursor: pointer;
+}
+
+.custom{
+  display: flex;
+  border-top: 1px solid #e5e9f2;
+padding: 30px;
+}
+.custom  input[type="button"] {
+  border: none;
+  padding:10px;
+  color: white;
+  background-color: rgba(0, 82, 204, 1);
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.hidden{
+  display: none;
+}
+.customReview{
+  display: flex;
+  flex-direction: column;
+  padding:10px;
+  
+}
+.reviewname{
+  padding: 10px;
+  background-color: rgba(249, 250, 252, 1);
+  border-top: 1px solid #e5e9f2;
+}
+.reviewname > p{
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 30px;
+}
+.reviewname + p, .reviewdate p{ 
+   font-size: 13px;
+  color: rgba(154, 166, 183, 1);
+  
+}
+.reviewname + p{
+padding: 6px;}
+.reviewdate{
+  display: flex;
+  justify-content: space-between;
+}
+.endreview{
+   border-bottom: 1px solid #e5e9f2;
+}
+.rawdetails{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px , 1fr));
+        grid-row-gap: 60px;
+        grid-column-gap: 10px;
+        place-content: center;
+        margin-bottom: 20px;
+         margin-top: 20px;
+         justify-content: center;
+        
+
+    }
+    .detailflexCard{
+       text-align: center;
+    border: 1px solid #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    }
+    .book-photo2{
+  width: 120px;
+}
+.detailsprice{
+      margin-top: 30px;
+}
+.darebadetails{
+margin-bottom: 5%;
+}
+.card-title-detailes{
+      height: 30px;
+}
+.semiproduct{
+  margin-top: 2%;
+  margin-bottom: 50%;
+}
+/*  */
+.rawcate{
+  display: flex;
+  flex-wrap: wrap;
+}
+.col-cate1{
+  flex-basis: 25%;
+}
+.col-cate2{
+flex-basis: 70%;
+}
+.titlecate{
+display: flex;
+    border: 1px solid rgba(42, 107, 41, 1);
+    border-radius: 5px;
+    padding: 15px 10px;
+    align-items: center;
+    color: rgba(42, 107, 41, 1);
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.titlecate p{
+  margin-right: 10px;
+}
+.resultfilter{
+display: flex;
+flex-direction: column;
+}
+.resultfilter >p{
+      background-color: rgba(42, 107, 41, 1);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 5px 5px 0 0;
+}
+    
+.resultfilter1{
+ display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    background: rgba(237, 246, 255, 1);
+}
+.resultfilter1 >span{
+font-size: 20px;
+    border: 1px solid black;
+    padding: 0px 5px;
+}
+.rawcatebook{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px , 1fr));
+        grid-row-gap: 60px;
+        grid-column-gap: 5px;
+        place-content: center;
+        margin-bottom: 20px;
+         margin-top: 20px;
+         justify-content: center;
+         margin-right: 30px;
+
+    }
+       .book-photo-cate{
+  width: 120px;
+}
 /* السلة */
 .col-cart1{
-    flex-basis: 70%;
+    flex-basis: 60%;
     padding:10px;
-    min-width: 500px;
+    
     margin-bottom: 50px;
     display: flex;
     justify-content: space-between;
@@ -734,206 +1542,99 @@ justify-content: space-between;
     border-radius: 4px;
     cursor: pointer;
      }
+     /* cart_page */
+   .cart .book-name p{ 
+     color: #37363c;
+   }
+   .cart .book-name span{
+    color:#a7a8a9;
+     font-size: 12px;
+     padding: 10px;
+     }
+     .cart .note-container{
+      display:flex;
+      justify-content: center;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+    }
+     .cart .note span{
+       font-weight: bold;
+     }
+     .cart .note a{
+       text-decoration: none;
+     }
+     .cart .note {
+       background-color: #fff9eb;
+       border-right:4px solid #fcd214 ;
+       padding: 10px;
+       flex-basis: 60%;
+       border-radius: 5px;
+       line-height: 20px;
+     }
+  .cart td{
+    padding: 0px;
+  }
+     .cart .note-space{
+       flex-basis: 5%;
+     }
+     .cart .numbers{
+      flex-basis: 40%;
+     }
+     .cart table{
+width: 20%;
+       border: 1px solid #ccc;
+       border-spacing:0;
+       text-align: center;
+       float:left;
+       margin-left:15px;
+       padding:0px;
+     }
+     .cart table .muns{
+      cursor: pointer;
+     }
+    
+   .cart table .plus{
+     border-bottom: 1px solid #ccc;
+     cursor: pointer;
+   }
+   .cart table .table-opertion{
+     border-right: 1px solid#ccc;
+     background-color:#f2f2f2;
+   }
+   .cart table .table-number , .cart table .plus ,.cart table .muns{
+     padding:3px;
+   }
+   .cart-row{
+     width:100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 5px;
+    margin-bottom: 20px;
+   }
+   .cart-p{
+     margin-top: 100px;
+   }
     /* اغلاق السلة */
-    /* صفحة التفاصيل */
-    /* Style the list */
-ul.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-  /* background-color: #eee; */
+    /* media query */
+/* small */
+@media(max-width: 768px){
+   .main-continer{
+     padding: 0px;
+overflow: hidden;
+   }
+   .logo, .search-form input[type="text"]{
+     margin: 0px;
+   }
+   .logo img{
+     width: 40px;
+   }
+   .grid-continer{
+     overflow: hidden;
+   }
 }
-
-/* Display list items side by side */
-ul.breadcrumb li {
-  display: inline;
-  font-size: 18px;
+/* medium */
+@media(min-width: 992px){
+    
 }
-
-/* Add a slash symbol (/) before/behind each list item */
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: "/\00a0";
-}
-
-/* Add a color to all links inside the list */
-ul.breadcrumb li a {
-  color: #0275d8;
-  text-decoration: none;
-}
-
-/* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
-  /* color: #01447e; */
-  text-decoration: underline;
-}
- .book-details{
-     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-     
-}
-.col-3{
-  flex-basis: 30%;
-    padding:10px; 
-  
-}
- .book-slide{
-   text-align: center;
-    padding: 10px;
-    min-width: 200px;
-    border: 1px solid #f2f2f2;
-        margin-right: 20px;
-}
-
-.book-pic{
-  display: flex;
-  justify-content: center;
-}
-.book-pic img{
- width: 50px;
-}
-.book-pic > .column {
-  padding: 0 8px;
-}
-
-.book-pic:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Create four equal columns that floats next to eachother */
-.column {
-  float: left;
-  width: 25%;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: absolute;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Hide the slides by default */
-.mySlides {
-  display: none;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 100%;
-  border-radius: 3px 0 0 3px;
-}
-.prev{
-  left: 100%;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Caption text */
-.caption-container {
-  text-align: center;
-  background-color: black;
-  padding: 2px 16px;
-  color: white;
-}
-
-img.demo {
-  opacity: 0.6;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-    /* اغلاق صفحة التفاصيل */
-/* البحث */
-
-#counter{
-  width: 20px;
-height: 20px;
-background-color: red;
-    border-radius: 50%;
-color:white;
-display: flex;
-justify-content: center;
-align-items: center;
-position: absolute;
-
-}
+/* large */
+@media(min-width: 1200px){
+    
+    }

@@ -3,7 +3,7 @@
 // let modelContent = document.getElementById("sec1");
 // loginShow.addEventListener('click',()=>{
 //     modelContent.style.visibility ='visible';
-// });
+// });//////////////////////login
 let modal = document.getElementById("modal");
 let btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
@@ -11,6 +11,7 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function () {
+
     modal.style.display = "flex";
     // modal.style.visibility = "visible";
 }
@@ -28,12 +29,14 @@ window.onclick = function (event) {
         // modal.style.visibility = "hidden";
     }
 }
-/////////////////////////model2////////////
+/////////////////////////model2//////////// sign in
 let modal2 = document.getElementById("modal2");
 let btn2 = document.getElementById("btn2");
 var span2 = document.getElementsByClassName("close2")[0];
+var return1 = document.getElementById("return1");
 
 btn2.onclick = function () {
+
     modal2.style.display = "flex";
     // modal.style.visibility = "visible";
     //  modal.style.display = "none";
@@ -42,6 +45,7 @@ btn2.onclick = function () {
 // When the user clicks on <span> (x), close the modal
 span2.onclick = function () {
     modal2.style.display = "none";
+    modal.style.display = "none";
     // modal.style.visibility = "hidden";
 }
 
@@ -51,6 +55,10 @@ window.onclick = function (event) {
         modal2.style.display = "none";
         // modal.style.visibility = "hidden";
     }
+}
+return1.onclick = function () {
+    modal2.style.display = "none";
+    modal.style.display = "flex";
 }
 ////////////////////////// sllider///////////////////
 var slideIndex = 1;
@@ -76,16 +84,18 @@ function showSlides(n) {
         slides[i].style.display = "none";
     }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
+        dots[i].className = dots[i].className.replace("active", "");
     }
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides(n), 3000);
 }
-////////////////////////////////
+////////////////////////////////countsown timer
 
-//////////////////////
+
+/////////////////////////////
 const countdown = () => {
-    const upperDate = new Date('Jan 21, 2022 00:00:00').getTime();
+    const upperDate = new Date('Jan 26, 2022 00:00:00').getTime();
     const currentDate = new Date().getTime();
     const diffDate = upperDate - currentDate;
 
@@ -99,58 +109,23 @@ const countdown = () => {
     const remain_hours = Math.floor((diffDate % days) / hours);
     const remain_minutes = Math.floor((diffDate % hours) / minutes);
     const remain_second = Math.floor((diffDate % minutes) / second);
+    var d = document.getElementsByClassName('days');
+    var h = document.getElementsByClassName('hours');
+    var m = document.getElementsByClassName('minutes');
+    var s = document.getElementsByClassName('seconds');
+    for (var x = 0; x < d.length; x++) {
+        d[x].innerHTML = remain_days;
+    }
+    for (var y = 0; y < h.length; y++) {
+        h[y].innerHTML = remain_hours;
+    }
+    for (var z = 0; z < m.length; z++) {
+        m[z].innerHTML = remain_minutes;
+    }
+    for (var r = 0; r < s.length; r++) {
+        s[r].innerHTML = remain_second;
+    }
 
-    var d = document.getElementById('days');
-    var h = document.getElementById('hours');
-    var m = document.getElementById('minutes');
-    var s = document.getElementById('seconds');
-
-    d.innerHTML = remain_days;
-    h.innerHTML = remain_hours;
-    m.innerHTML = remain_minutes;
-    s.innerHTML = remain_second;
-
-
-    var d1 = document.getElementById('days1');
-    var h1 = document.getElementById('hours1');
-    var m1 = document.getElementById('minutes1');
-    var s1 = document.getElementById('seconds1');
-
-    d1.innerHTML = remain_days;
-    h1.innerHTML = remain_hours;
-    m1.innerHTML = remain_minutes;
-    s1.innerHTML = remain_second;
-
-    var d2 = document.getElementById('days2');
-    var h2 = document.getElementById('hours2');
-    var m2 = document.getElementById('minutes2');
-    var s2 = document.getElementById('seconds2');
-
-    d2.innerHTML = remain_days;
-    h2.innerHTML = remain_hours;
-    m2.innerHTML = remain_minutes;
-    s2.innerHTML = remain_second;
-
-    var d3 = document.getElementById('days3');
-    var h3 = document.getElementById('hours3');
-    var m3 = document.getElementById('minutes3');
-    var s3 = document.getElementById('seconds3');
-
-    d3.innerHTML = remain_days;
-    h3.innerHTML = remain_hours;
-    m3.innerHTML = remain_minutes;
-    s3.innerHTML = remain_second;
-
-
-    var d4 = document.getElementById('days4');
-    var h4 = document.getElementById('hours4');
-    var m4 = document.getElementById('minutes4');
-    var s4 = document.getElementById('seconds4');
-
-    d4.innerHTML = remain_days;
-    h4.innerHTML = remain_hours;
-    m4.innerHTML = remain_minutes;
-    s4.innerHTML = remain_second;
 }
+
 setInterval(countdown, 1000);
-/////////////////////////////

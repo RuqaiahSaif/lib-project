@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
         integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <title>category</title>
+    <link rel="stylesheet" href="css/steper.css" />
+
+    <title>finish</title>
 </head>
 
 <body>
@@ -30,7 +32,7 @@
                             <li><a href="#sec1" id="myBtn"><img src="img\svg\svgexport-1.svg"><span>ادخل لحسابك أو
                                         سجل الآن</span></a>
                             </li>
-                            <li><a href="index.html"><img src="img\svg\svgexport-2.svg"><span>الرئيسية</span></a></li>
+                            <li><a href=""><img src="img\svg\svgexport-2.svg"><span>الرئيسية</span></a></li>
                             <li><a href=""><img src="img\svg\svgexport-3.svg"><span>من نحن</span></a></li>
                             <li><a href=""><img src="img\svg\svgexport-4.svg"><span>اتصل بنا</span> </a></li>
                             <li><a href=""><img src="img\svg\svgexport-5.svg"><span>المساعدة</span></a></li>
@@ -56,7 +58,7 @@
                             </form>
                         </div>
                         <div class="cart-icon">
-                            <div class="icon-continer"><a href="cart.html"><img src="img/svg/cart.svg"></a></div>
+                            <div class="icon-continer"><img src="img/svg/cart.svg"></div>
                             <span id="counter"></span>
                         </div>
                     </div>
@@ -103,142 +105,92 @@
 
         </section>
 
-        <section class="sec cate">
-            <div class="main-continer">
-                <ul class="breadcrumb">
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="#">الكتب العربية</a></li>
-                    <li><a href="#">كتب الكترونية</a></li>
-                </ul>
-            </div>
-            <div class="main-continer">
-                <div class="rawcate">
-                    <div class="col-cate1">
-                        <div class="titlecate">
-                            <img src="img/svg/svgexport-57.svg" alt="">
-                            <p>كتب إلكترونية</p>
-                        </div>
-                        <div class="resultfilter">
-                            <p>تصفية النتائج</p>
-                            <div class="resultfilter1">
-                                <p>علامة تجارية</p>
-                                <span>-</span>
-                            </div>
-                        </div>
-                        <div class="resultfilter1">
-                            <p>السعر </p>
-                            <span>-</span>
-                        </div>
-                        <div class="resultfilter1">
-                            <p>السعر </p>
-                            <span>-</span>
-                        </div>
-                        <div class="resultfilter1">
-                            <p>صيغة الكتاب </p>
-                            <span>-</span>
-                        </div>
+        <section class="sec">
+
+
+
+            <!-- start of stepper -->
+            <form action="#" class="form">
+                <h1 class="text-center">انهاء التسوق</h1>
+                <!-- Progress bar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+
+                    <div class="progress-step progress-step-active" data-title="المعلومات الشخصية"></div>
+                    <div class="progress-step" data-title="معلومات الدفع"></div>
+                    <div class="progress-step" data-title="التأكيد"></div>
+                    <div class="progress-step" data-title="تم"></div>
+                </div>
+
+                <!-- Steps -->
+                <div class="form-step form-step-active">
+                    <div class="input-group">
+                        <label for="username">الاسم</label>
+                        <input type="text" name="username" id="username" required />
                     </div>
-                    <div class="col-cate2">
-                        <div>
-                            <p>الترتيب بحسب</p>
-                        </div>
-                        <div class="rawcatebook">
-
-
-                            <div class="flexCardcate">
-                                <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo-cate"></a>
-                                <div class="card-title">
-                                    <img src="img/svg/svgexport-57.svg" alt="">
-                                    <p>كتاب الكتروني</p>
-
-                                </div>
-                                <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
-                                <div class="book-price">
-                                    <p>17</p><span>ر.س</span>
-                                </div>
-                                <div class="dareba">شامل الضريبه</div>
-                                <div class="icons">
-                                    <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
-                                    <img src="img/svg/svgexport-56.svg">
-                                </div>
-
-
-                            </div>
-
-                            <div class="flexCardcate">
-                                <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo-cate"></a>
-                                <div class="card-title">
-                                    <img src="img/svg/svgexport-57.svg" alt="">
-                                    <p>كتاب الكتروني</p>
-
-                                </div>
-                                <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
-                                <div class="book-price">
-                                    <p>17</p><span>ر.س</span>
-                                </div>
-                                <div class="dareba">شامل الضريبه</div>
-                                <div class="icons">
-                                    <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
-                                    <img src="img/svg/svgexport-56.svg">
-                                </div>
-
-
-                            </div>
-
-                            <div class="flexCardcate">
-                                <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo-cate"></a>
-                                <div class="card-title">
-                                    <img src="img/svg/svgexport-57.svg" alt="">
-                                    <p>كتاب الكتروني</p>
-
-                                </div>
-                                <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
-                                <div class="book-price">
-                                    <p>17</p><span>ر.س</span>
-                                </div>
-                                <div class="dareba">شامل الضريبه</div>
-                                <div class="icons">
-                                    <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
-                                    <img src="img/svg/svgexport-56.svg">
-                                </div>
-
-
-                            </div>
-
-                            <div class="flexCardcate">
-                                <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo-cate"></a>
-                                <div class="card-title">
-                                    <img src="img/svg/svgexport-57.svg" alt="">
-                                    <p>كتاب الكتروني</p>
-
-                                </div>
-                                <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
-                                <div class="book-price">
-                                    <p>17</p><span>ر.س</span>
-                                </div>
-                                <div class="dareba">شامل الضريبه</div>
-                                <div class="another-ver"><span>صيغ اخرى:</span>
-                                    <p>كتاب مطبوع</p>
-                                </div>
-                                <div class="icons">
-                                    <img src="img/svg/svgexport-2.svg">
-                                    <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
-                                    <img src="img/svg/svgexport-56.svg">
-                                </div>
-
-
-
-                            </div>
-
-                        </div>
+                    <div class="input-group">
+                        <label for="uemail">الايميل</label>
+                        <input type="email" name="position" id="uemail"  required/>
+                    </div>
+                    <div class="input-group">
+                        <label for="position">العنوان</label>
+                        <input type="text" name="position" id="position" required/>
+                    </div>
+                    <div class="">
+                        <a href="#" class="btn btn-next width-50 ml-auto">التالي</a>
                     </div>
                 </div>
-        </section>
-        </section>
-
+                <div class="form-step">
+                    <div class="input-group">
+                        <label for="idnumber">رقم البطاقة</label>
+                        <input type="number" name="idnumber" id="idnumber" />
+                    </div>
+                    <div class="input-group">
+                        <label for="idname">الاسم في البطاقة</label>
+                        <input type="text" name="idname" id="idname" />
+                    </div>
+                    <div class="input-group">
+                        <label for="idexdate">تاريخ الانتهاء</label>
+                        <input type="date" name="idexdate" id="idexdate" />
+                    </div>
+                    <div class="input-group">
+                        <label for="ccv">الرقم السري</label>
+                        <input type="number" name="ccv" id="ccv" />
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">السابق</a>
+                        <a href="#" class="btn btn-next">التالي</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" id="dob" />
+                    </div>
+                    <div class="input-group">
+                        <label for="ID">National ID</label>
+                        <input type="number" name="ID" id="ID" />
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">السابق</a>
+                        <a href="#" class="btn btn-next">التالي</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" />
+                    </div>
+                    <div class="input-group">
+                        <label for="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" />
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">السابق</a>
+                        <input type="submit" value="Submit" class="btn" />
+                    </div>
+                </div>
+            </form>
         </section>
         <footer class="ft">
             <div class="ft-color">
@@ -382,26 +334,35 @@
             <div class="model-continer">
                 <section id="modal2">
                     <div class="small-continer-mod2">
-                        <div class="modal-content">
+                        <div class="modal-content center">
                             <div class="col-1">
                                 <span class="close2">&times;</span>
                                 <h1>إنشاء حساب</h1>
 
                                 <form>
-                                    <input type="text" id="uphone" placeholder="رقم الجوال">
-                                    <input type="text" id="uphone" placeholder="رمز البلد">
-                                    <p>سوف نرسل لك<span>رمز التحقق عن طريق رسالة نصية</span></p>
-                                    <input type="button" id="valiNum" placeholder="إرسال رمز التحقق">
+                                    <div class="signinflex"><input type="text" id="uphone" placeholder="رقم الجوال"
+                                            class="flex1">
+                                        <div class="flex2"><input type="text" id="uphone" placeholder="رمز البلد"></div>
+                                    </div>
+                                    <p class="vercode"> سوف نرسل لك<span> رمز التحقق عن طريق رسالة نصية</span></p>
+                                    <input type="button" id="valiNum" value="إرسال رمز التحقق">
                                     <br>
-                                    <input type="text" id="fname" placeholder="الاسم الاول ">
+                                    <input type="text" id="fname" placeholder="الاسم الاول " required>
                                     <br>
-                                    <input type="text" id="familyname" placeholder="اسم العائلة ">
+                                    <input type="text" id="familyname" placeholder="اسم العائلة " required>
                                     <br>
-                                    <input type="email" id="vsignemail" placeholder="البريدالالكتروني">
+                                    <input type="email" id="vsignemail" placeholder="البريدالالكتروني" required>
                                     <br>
-                                    <input type="email" id="email" placeholder=" تأكيد البريدالالكتروني ">
+                                    <input type="email" id="email" placeholder=" تأكيد البريدالالكتروني " required>
                                     <br>
-                                    <input type="password" id="signpass" placeholder="كلمة السر ">
+                                    <input type="password" id="signpass" placeholder="كلمة السر " required>
+                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                                    اوفق
+                                    على الشروط والاحكام
+                                    <br>
+                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                                    التسجيل
+                                    للانظمام للنشرة البريدية
                                     <br>
                                     <input type="submit" value="إنشاء حساب">
                                     <br>
@@ -417,6 +378,7 @@
             <!-- end signin -->
         </footer>
     </div>
+    <!-- end of stepper -->
     <script src="js/app.js"></script>
     <script src="js/app2.js"></script>
     <script src="js/app3.js"></script>

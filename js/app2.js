@@ -38,3 +38,20 @@ function showSlides(n) {
     dots[slideIndex - 1].className += " active";
     captionText.innerHTML = dots[slideIndex - 1].alt;
 }
+/////////////////////////////////// عرض اقل
+var less = document.getElementById("lessbtn");
+var table1 = document.getElementById("table");
+var more = false;
+less.onclick = function () {
+    table1.classList.toggle("hidden");
+    if (!more) {
+        less.innerHTML = "عرض اكثر";
+        more = true;
+    
+    }
+    else{
+        less.innerHTML = "عرض اقل";
+        more=false;
+    }
+}
+
