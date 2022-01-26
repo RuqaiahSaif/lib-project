@@ -74,6 +74,21 @@ function updateProgressbar() {
         ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
 }
 
+//////////////////////////////
+/////////////////////// multi languge
+function togglestyle() {
+    var styles = document.getElementsByTagName('link')[0];
 
+
+    if (styles.getAttribute('href') == 'css/style.css') {
+        styles.setAttribute('href', 'css/styleEN.css');
+
+
+    }
+    else {
+        styles.setAttribute('href', 'css/style.css');
+
+    }
+}
 
 
