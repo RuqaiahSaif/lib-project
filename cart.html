@@ -23,9 +23,10 @@
             <nav>
                 <div class="hd-color">
                     <div class="main-continer">
-                        <ul>
+                        <i class="fas fa-bars toggle-menue"></i>
+                        <ul id="dropmenue">
 
-                            <i class="fas fa-bars toggle-menue"></i>
+
                             <li><a href="#sec1" id="myBtn"><img src="img\svg\svgexport-1.svg"><span>ادخل لحسابك أو
                                         سجل الآن</span></a>
                             </li>
@@ -44,7 +45,7 @@
                 <div class="main-continer">
                     <div class="nav2">
                         <div class="logo">
-                            <img src="img/logo.png" alt="">
+                            <a href="index.html"> <img src="img/logo.png" alt=""></a>
                         </div>
                         <div class="form-div">
                             <form class="search-form">
@@ -66,36 +67,33 @@
         <!-- end header -->
         <!-- slidebar -->
         <section class="sidebar">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-
-                    <img src="img/slider_img.webp" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-
-                    <img src="img/slider_img3.jpg" style="width:100%">
+            <div class="continer">
+                <div class="slider">
+                    <img src="img/slider_img.webp" alt="">
 
                 </div>
-
-                <div class="mySlides fade">
-
-                    <img src="img/slider_img2.webp" style="width:100%">
+                <div class="slider">
+                    <img src="img/slider_img2.webp" alt="">
 
                 </div>
+                <div class="slider">
+                    <img src="img/slider_img3.jpg" alt="">
 
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <!-- The dots/circles -->
-                <div class="dots" style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
+                <div class="slider">
+                    <img src="img/slider_img4.webp" alt="">
+
+                </div>
+                <a class="prev1" onclick="plusSlides_he(-1)">&#10094;</a>
+                <a class="next1" onclick="plusSlides_he(1)">&#10095;</a>
+            </div>
+
+            <div style="text-align: center;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
             </div>
             <br>
 
@@ -112,10 +110,11 @@
                         <div class="cart-row">
                             <div class="cart-det">
                                 <div class="book-name"> <img src="img/book1.jpg" alt="">
-                                    <p>البداية والنهاية الجزء الأول (كتاب الكتروني)<span><br>منتج قابل للخصم لحاملي بطاقة
+                                    <p>البداية والنهاية الجزء الأول (كتاب الكتروني)<span><br>منتج قابل للخصم لحاملي
+                                            بطاقة
                                             خصم مكتبة جرير</span></p>
-        
-        
+
+
                                 </div>
                                 <p class="price">3.99 <span>ر.س</span></p>
                             </div>
@@ -141,18 +140,19 @@
                                 <i class="fa-solid fa-circle-xmark"></i><span>احذف </span>
                             </div>
                         </div>
-        
-        
+
+
                         <div class="cart-row">
                             <div class="cart-det">
                                 <div class="book-name"> <img src="img/book1.jpg" alt="">
-                                    <p>البداية والنهاية الجزء الأول (كتاب الكتروني)<span><br>منتج قابل للخصم لحاملي بطاقة
+                                    <p>البداية والنهاية الجزء الأول (كتاب الكتروني)<span><br>منتج قابل للخصم لحاملي
+                                            بطاقة
                                             خصم مكتبة جرير</span></p>
-        
+
                                 </div>
                                 <p class="price">3.99 <span>ر.س</span></p>
                             </div>
-        
+
                             <div class="note-container">
                                 <div class="note-space"></div>
                                 <div class="note">
@@ -162,10 +162,10 @@
                                 <div class="numbers">
                                     <table>
                                         <tr>
-                                            <td class="table-number" id="cart-number">1</td>
+                                            <td class="table-number" id="cart-number1">1</td>
                                             <td class="table-opertion">
-                                                <div class="plus" id="plus" onclick="pluse()">+</div>
-                                                <div class="muns" id="muns" onclick="muns()">-</div>
+                                                <div class="plus" id="plus" onclick="pluse1()">+</div>
+                                                <div class="muns" id="muns" onclick="muns1()">-</div>
                                             </td>
                                         </tr>
                                     </table>
@@ -175,11 +175,12 @@
                                 <i class="fa-solid fa-circle-xmark"></i><span>احذف </span>
                             </div>
                         </div>
-        
+
                         <div class="cart-row">
                             <div class="cart-det">
                                 <div class="book-name"> <img src="img/book1.jpg" alt="">
-                                    <p>البداية والنهاية الجزء الأول (كتاب الكتروني)<span><br>منتج قابل للخصم لحاملي بطاقة
+                                    <p>البداية والنهاية الجزء الأول (كتاب الكتروني)<span><br>منتج قابل للخصم لحاملي
+                                            بطاقة
                                             خصم مكتبة جرير</span></p>
                                 </div>
                                 <p class="price">3.99 <span>ر.س</span></p>
@@ -193,10 +194,10 @@
                                 <div class="numbers">
                                     <table>
                                         <tr>
-                                            <td class="table-number" id="cart-number">1</td>
+                                            <td class="table-number" id="cart-number2">1</td>
                                             <td class="table-opertion">
-                                                <div class="plus" id="plus" onclick="pluse()">+</div>
-                                                <div class="muns" id="muns" onclick="muns()">-</div>
+                                                <div class="plus" id="plus" onclick="pluse2()">+</div>
+                                                <div class="muns" id="muns" onclick="muns2()">-</div>
                                             </td>
                                         </tr>
                                     </table>
@@ -209,16 +210,20 @@
                     </div>
                     <div class="col-cart2">
                         <div class="cost-cart">
+                            
                             <p>المجموع</p>
-                            <p> 86.97 ر.س</p>
+                            <p> 86.97 <span style="font-size: 10px;">ر.س</span></p>
                         </div>
                         <div class="cost-cart">
                             <p>تكاليف الشحن </p>
                             <p class="green"> مجاني</p>
                         </div>
                         <div class="cost-cart">
-                            <p class="red">المجموع الكلي <span> شامل الضريبة</span></p>
-                            <p class="red"> 86.97 ر.س</p>
+                            <p class="red">المجموع الكلي <span class="dareba"> شامل الضريبة</span></p>
+                            <div class="book-price">
+                                <p style="color: red;">86.97</p><span>ر.س</span>
+                            </div>
+                            <!-- <p class="red"> 86.97 ر.س</p> -->
                         </div>
                         <div class="cart-p">
                             <p>بالضغط على انهاء التسوق فانت توافق عللى الشروط والاحكام وسياسة الخصوصية</p>
@@ -410,6 +415,7 @@
     <script src="js/app.js"></script>
     <script src="js/app2.js"></script>
     <script src="js/app3.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 
 </html>

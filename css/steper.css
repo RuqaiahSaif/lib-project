@@ -40,6 +40,9 @@ input {
 .text-center {
   text-align: center;
 }
+.form{
+  margin-bottom: 20px;
+}
 
 /* Progressbar */
 .progressbar {

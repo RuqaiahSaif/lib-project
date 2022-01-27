@@ -37,7 +37,8 @@ var return1 = document.getElementById("return1");
 
 btn2.onclick = function () {
 
-    modal2.style.display = "flex";
+    modal2.style.display = "block";
+    modal.style.display = "none";
     // modal.style.visibility = "visible";
     //  modal.style.display = "none";
 }
@@ -61,34 +62,34 @@ return1.onclick = function () {
     modal.style.display = "flex";
 }
 ////////////////////////// sllider///////////////////
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex2 = 0;
+showSlides_he(slideIndex2);
 
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function plusSlides_he(n) {
+    showSlides_he(slideIndex2 += n);
 }
 
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function currentSlide_he(n) {
+    showSlides_he(slideIndex2 = n);
 }
 
-function showSlides(n) {
+function showSlides_he(n) {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("slider");
     var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
+    if (n > slides.length) { slideIndex2 = 1 }
+    if (n < 1) { slideIndex2 = slides.length }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
+    slideIndex2++;
+    if (slideIndex2 > slides.length) { slideIndex2 = 1 }
     for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace("active", "");
+        dots[i].className = dots[i].className.replace(" active", "");
     }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
-    setTimeout(showSlides(n), 3000);
+    slides[slideIndex2 - 1].style.display = "block";
+    dots[slideIndex2 - 1].className += " active";
+    setTimeout(showSlides_he, 3000);
 }
 ////////////////////////////////countsown timer
 
@@ -130,4 +131,15 @@ const countdown = () => {
 
 setInterval(countdown, 1000);
 
-/////////////////////// multi languge
+/////////////////////// drop down
+let tmenu = document.querySelector(".toggle-menue");
+let tdropmenue = document.getElementById("dropmenue");
+tmenu.addEventListener('click', () => {
+    if (tdropmenue.style.display === "none") {
+        tdropmenue.style.display = "flex";
+    }
+    else {
+        tdropmenue.style.display = "none";
+    }
+
+});

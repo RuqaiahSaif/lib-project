@@ -12,7 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500&display=swap" rel="stylesheet">
-    
+
     <!-- <link rel="stylesheet" href="css/styleEN.css"> -->
     <title>library</title>
 </head>
@@ -26,9 +26,10 @@
             <nav>
                 <div class="hd-color">
                     <div class="main-continer">
-                        <ul>
+                        <i class="fas fa-bars toggle-menue"></i>
+                        <ul id="dropmenue">
 
-                            <i class="fas fa-bars toggle-menue"></i>
+
                             <li><a href="#sec1" id="myBtn"><img src="img\svg\svgexport-1.svg"><span>ادخل لحسابك أو
                                         سجل الآن</span></a>
                             </li>
@@ -38,7 +39,8 @@
                             <li><a href=""><img src="img\svg\svgexport-5.svg"><span>المساعدة</span></a></li>
                             <li><a href=""><img src="img\svg\svgexport-11.svg"><span>سياسة الخصوصية</span></a></li>
                             <li><a href=""><img src="img\svg\svgexport-12.svg"><span>اليمن YER</span></a></li>
-                            <li><a href=""><span onclick="togglestyle()">English</span><img src="img\svg\svgexport-14.svg"></a></li>
+                            <li><a href=""><span onclick="togglestyle()">English</span><img
+                                        src="img\svg\svgexport-14.svg"></a></li>
 
                         </ul>
 
@@ -47,7 +49,7 @@
                 <div class="main-continer">
                     <div class="nav2">
                         <div class="logo">
-                            <img src="img/logo.png" alt="">
+                            <a href="index.html"><img src="img/logo.png" alt=""></a>
                         </div>
                         <div class="form-div">
                             <form class="search-form">
@@ -69,41 +71,41 @@
         <!-- end header -->
         <!-- slidebar -->
         <section class="sidebar">
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
-
-                <!-- Full-width images with number and caption text -->
-                <div class="mySlides fade">
-
-                    <img src="img/slider_img.webp" style="width:100%">
-                </div>
-
-                <div class="mySlides fade">
-
-                    <img src="img/slider_img3.jpg" style="width:100%">
+            <div class="continer">
+                <div class="slider">
+                    <img src="img/slider_img.webp" alt="">
 
                 </div>
-
-                <div class="mySlides fade">
-
-                    <img src="img/slider_img2.webp" style="width:100%">
+                <div class="slider">
+                    <img src="img/slider_img2.webp" alt="">
 
                 </div>
+                <div class="slider">
+                    <img src="img/slider_img3.jpg" alt="">
 
-                <!-- Next and previous buttons -->
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                <!-- The dots/circles -->
-                <div class="dots" style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
                 </div>
+                <div class="slider">
+                    <img src="img/slider_img4.webp" alt="">
+
+                </div>
+                <a class="prev1" onclick="plusSlides_he(-1)">&#10094;</a>
+                <a class="next1" onclick="plusSlides_he(1)">&#10095;</a>
+            </div>
+
+            <div style="text-align: center;">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+
             </div>
             <br>
 
 
         </section>
+        <div class="ads">
+
+        </div>
         <!-- books section -->
         <section class="sec">
             <div class="main-continer">
@@ -161,8 +163,8 @@
                     <div class="raw1 list">
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
@@ -170,12 +172,12 @@
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
                             <div class="sptialshow">
@@ -187,21 +189,21 @@
                             </div>
                         </div>
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
                             <div class="sptialshow">
@@ -215,16 +217,16 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -232,7 +234,7 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
                             <div class="sptialshow">
@@ -247,21 +249,21 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
                             <div class="sptialshow">
@@ -276,21 +278,21 @@
 
 
 
-                        <div class="flexCard ">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
                             <div class="sptialshow">
@@ -321,8 +323,8 @@
                     <div class="raw1 list">
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
@@ -330,33 +332,33 @@
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
 
                         </div>
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -364,16 +366,16 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -381,7 +383,7 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -390,21 +392,21 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -413,21 +415,21 @@
 
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -453,8 +455,8 @@
                     <div class="raw1 list">
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
@@ -462,33 +464,33 @@
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
 
                         </div>
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -496,16 +498,16 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -513,7 +515,7 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -522,21 +524,21 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -545,21 +547,21 @@
 
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -579,16 +581,14 @@
                     <div class="section-title">
                         <h2>السياسة</h2>
                         <a href="category.html">
-                            <a href="category.html">
-                                <p>عرض الكل</p>
-                            </a>
+                            <p>عرض الكل</p>
                         </a>
                     </div>
                     <div class="raw1 list">
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
@@ -596,33 +596,33 @@
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
 
                         </div>
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -630,16 +630,16 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -647,7 +647,7 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -656,21 +656,21 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -679,21 +679,21 @@
 
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -719,8 +719,8 @@
                     <div class="raw1 list">
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
@@ -728,33 +728,33 @@
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
 
                         </div>
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -762,16 +762,16 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -779,7 +779,7 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -788,21 +788,21 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -811,21 +811,21 @@
 
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -851,8 +851,8 @@
                     <div class="raw1 list">
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
@@ -860,33 +860,33 @@
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
 
                         </div>
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -894,16 +894,16 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -911,7 +911,7 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -920,21 +920,21 @@
                         </div>
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -943,21 +943,21 @@
 
 
 
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
 
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
 
@@ -981,61 +981,61 @@
                         </a>
                     </div>
                     <div class="raw1 list">
-
-
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+            
+            
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/kebr.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
-
+            
                             </div>
                             <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>17.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
-
-
+            
+            
                         </div>
-
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+            
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/khalf.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
-
+            
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">خلف قوتي ضعف يحبك(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>24.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
-
-
+            
+            
                         </div>
-
-
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+            
+            
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/katlog.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
-
+            
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">كتالوج الحب(كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="another-ver"><span>صيغ اخرى:</span>
@@ -1043,62 +1043,62 @@
                             </div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
-
-
-
+            
+            
+            
                         </div>
-
-
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+            
+            
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/asaran.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
-
+            
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">الى الذي اسرني حبه (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>19.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
-
-
+            
+            
                         </div>
-
-
-
-                        <div class="flexCard">
-                            <a href="details.html"><img src="img/book1.jpg" alt="" class="book-photo"></a>
+            
+            
+            
+                        <div class="flexCard flexCardsearch">
+                            <a href="details.html"><img src="img/zawag.jpg" alt="" class="book-photo"></a>
                             <div class="card-title">
                                 <img src="img/svg/svgexport-57.svg" alt="">
                                 <p>كتاب الكتروني</p>
-
+            
                             </div>
-                            <div class="book-title-home">كبريا وهوى (كتاب الكتروني)</div>
+                            <div class="book-title-home">زواج غير متوقع (كتاب الكتروني)</div>
                             <div class="book-price">
-                                <p>17</p><span>ر.س</span>
+                                <p>3.99</p><span>ر.س</span>
                             </div>
                             <div class="dareba">شامل الضريبه</div>
                             <div class="icons">
                                 <img src="img/svg/svgexport-2.svg">
-                                <img src="img/svg/svgexport-21.svg" class="add" onclick="add()">
+                                <img src="img/svg/svgexport-21.svg" class="add" onclick="clickCounter()">
                                 <img src="img/svg/svgexport-56.svg">
                             </div>
-
-
+            
+            
                         </div>
-
-
-
-
+            
+            
+            
+            
                     </div>
                 </div>
             </section>
@@ -1253,9 +1253,11 @@
                                 <h1>إنشاء حساب</h1>
 
                                 <form>
-                                   <div class="signinflex"><input type="text" id="uphone" placeholder="رقم الجوال" class="flex1">
-                                  <div class="flex2"><input type="text" id="uphone" placeholder="رمز البلد" ></div> </div>
-                                    <p class="vercode">  سوف نرسل لك<span> رمز التحقق عن طريق رسالة نصية</span></p>
+                                    <div class="signinflex"><input type="text" id="uphone" placeholder="رقم الجوال"
+                                            class="flex1">
+                                        <div class="flex2"><input type="text" id="uphone" placeholder="رمز البلد"></div>
+                                    </div>
+                                    <p class="vercode"> سوف نرسل لك<span> رمز التحقق عن طريق رسالة نصية</span></p>
                                     <input type="button" id="valiNum" value="إرسال رمز التحقق">
                                     <br>
                                     <input type="text" id="fname" placeholder="الاسم الاول " required>
@@ -1267,9 +1269,14 @@
                                     <input type="email" id="email" placeholder=" تأكيد البريدالالكتروني " required>
                                     <br>
                                     <input type="password" id="signpass" placeholder="كلمة السر " required>
-                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> اوفق على الشروط والاحكام
+                                    <div class="flexinput" style="display: inline-block;">
+                                        <input type="checkbox" checked="checked" name="remember"
+                                            style="margin-bottom:15px" style="display: inline-block;">
+                                        <p style="display: inline-block;">اوفق على الشروط والاحكام</p>
+                                    </div>
                                     <br>
-                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> التسجيل للانظمام للنشرة البريدية
+                                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px">
+                                    <p>التسجيل للانظمام للنشرة البريدية</p>
                                     <br>
                                     <input type="submit" value="إنشاء حساب">
                                     <br>
@@ -1286,7 +1293,7 @@
         </footer>
     </div>
     <script src="js/app.js"></script>
-    <script src="js/app2.js"></script>
+    <!-- <script src="js/app2.js"></script> -->
     <script src="js/app3.js"></script>
 </body>
 

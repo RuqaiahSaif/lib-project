@@ -2,7 +2,7 @@
 function search_book() {
     let input = document.getElementById('searchbar').value
     input = input.toLowerCase();
-    let x = document.getElementsByClassName('flexCard');
+    let x = document.getElementsByClassName('flexCardsearch');
 
     for (i = 0; i < x.length; i++) {
         if (!x[i].innerHTML.toLowerCase().includes(input)) {
@@ -15,16 +15,28 @@ function search_book() {
 }
 ////////////////////// add to cart
 
+const display=document.getElementById("counter");
 
-
-var count = 0;
-
-function add() {
-    count++;
-    sessionStorage.setItem('counter', count);
-
-    document.getElementById("counter").innerHTML = count;
+function clickCounter(){
+    if(typeof(Storage) !== "undefined"){
+        if(localStorage.clickcount){
+            localStorage.clickcount=Number(localStorage.clickcount)+1;
+        }
+        else{
+            localStorage.clickcount=1;
+        }
+        display.innerHTML=localStorage.clickcount;
+    }
 }
+display.innerHTML = localStorage.clickcount;
+// var count = 0;
+
+// function add() {
+//     count++;
+//     localStorage.setItem('counter', count);
+
+//     document.getElementById("counter").innerHTML = count;
+// }
 //////////////////////////////////////////////// steper
 const prevBtns = document.querySelectorAll(".btn-prev");
 const nextBtns = document.querySelectorAll(".btn-next");
